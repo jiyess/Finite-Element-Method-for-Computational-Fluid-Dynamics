@@ -1,1 +1,6 @@
-# -finite-element-method-for-computational-fluid-mechanics
+# Finite-Element-Method-for-Computational-Fluid-Dynamics
+
+最近在学习毕超老师《计算流体力学及其编程详解》一书。该书内容简明扼要，算例也比较清晰，附有详细的MATLAB代码，极其容易上手。但是在阅读该书过程中，发现书中代码还是有很多值得仔细琢磨和改进的地方。因此，特地将我修改的代码上传此处，以供大家参考交流。
+
+之后有时间的话，会一边学习一边上传一些文字说明，更准确的说是一些学习体会。
+
