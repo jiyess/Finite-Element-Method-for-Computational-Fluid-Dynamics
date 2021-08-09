@@ -1,3 +1,21 @@
+%    see Bi Chao, "Finite Element Method for Computational Fluid
+%    Dynamics and Its Detailed Programming"
+% 
+%    Copyright (C) 2021 Ye Ji, Dalian University of Technology
+%
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+% 
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 clc;clear;close all
 % d2u/dx2 - 1 = 0, 0<=x<=1
 % s.t.     u = 1,   if x = 0
@@ -12,9 +30,9 @@ JX = linspace(0,1,noNodes).';
 JM = [1:2:noNodes-1; 2:2:noNodes; 3:2:noNodes].';
 JB1 = [1, 1];
 JB2 = [noElement, 3, 2];
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%    网格离散数据     %%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%% 定义数值积分参数
 gaussPts = [0.932469514203152,0.661209386466265,0.238619186083197,-0.932469514203152,-0.661209386466265,-0.238619186083197];
