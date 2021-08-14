@@ -424,3 +424,31 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%      迭代步骤C结束    %%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+figure
+subplot(3,1,1)
+hold on
+for i = 1:noElement
+    patch(JXYV(JMP(i,:),1),JXYV(JMP(i,:),2),velocity_k1(JMP(i,:)), 'edgecolor','none')
+end
+axis off equal tight
+colorbar
+title('velocity\_k1')
+
+subplot(3,1,2)
+hold on
+for i = 1:noElement
+    patch(JXYV(JMP(i,:),1),JXYV(JMP(i,:),2),pressure_k1(JMP(i,:)), 'edgecolor','none')
+end
+axis off equal tight
+colorbar
+title('pressure\_k1')
+
+subplot(3,1,3)
+hold on
+for i = 1:noElement
+    patch(JXYV(JMP(i,:),1),JXYV(JMP(i,:),2),temp_k1(JMP(i,:)), 'edgecolor','none')
+end
+axis off equal tight
+colorbar
+title('temp\_k1')

@@ -42,13 +42,10 @@ sl = [ones(1,SL1),(1-(1-SS)/SL2):(SS-1)/SL2:SS,ones(1,SL3)*SS,...
    SS+(1-SS)/SL4:(1-SS)/SL4:1,ones(1,SL5)]';
 %%%%%%% 收敛比例系数
 
-Dx=L/Nx/2; %水平方向网格间距
-Dy=H/Ny/2; %竖直方向网格间距
 %%%%%%% 四边形二次单元JXYV生成
 JXYV = zeros(noNodesV, 2);
 JXYV(chan(:),1) = reshape(repmat(linspace(0, L, 2*Nx+1),2*Ny+1,1)',noNodesV,1);
 JXYV(chan(:),2) = reshape(repmat(linspace(0, H, 2*Ny+1),2*Nx+1,1).*sl,noNodesV,1);
-
 %%%%%%% 四边形二次单元JXYV生成
 
 %%%%%%% 四边形二次单元JMV生成
@@ -77,10 +74,6 @@ BE2 = cat(2, (Nx:Nx:noElement)', 2*ones(Ny,1), ones(Ny,1), zeros(Ny,1));
 BE3 = cat(2, (noElement-Nx+1:noElement)', 3*ones(Nx,1), zeros(Nx,1), ones(Nx,1));
 BE4 = cat(2, (1:Nx:noElement-Nx+1)', 4*ones(Ny,1), -ones(Ny,1), zeros(Ny,1));
 %%%%%%% BE数据生成
-
-%%%%%%% 调用四边形网格绘制程序
-plotRectangularGrid(JMP,JXYV,noElement, noNodesV, 0);
-%%%%%%% 调用四边形网格绘制程序
 
 %%%%%%% 存储网格数据
 % save('mesh_coupling.mat', 'noElement', 'noNodesV', 'noNodesP','JMV','JMP','JXYV',...
