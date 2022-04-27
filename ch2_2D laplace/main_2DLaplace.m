@@ -143,7 +143,7 @@ displacements(prescribedDof) = JB1(:,2);
 %%%%%%%%%%%%%%% 代入Dirichlet边界条件，求解 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-result = [JXY, displacements]
+result = [JXY, displacements];
 
 figure
 trisurf(JM, JXY(:,1), JXY(:,2), displacements)
